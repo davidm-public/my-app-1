@@ -2,21 +2,51 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Main</title>
-
+    <title>
+        Main
+    </title>
     <link rel="stylesheet" href="main.css">
-
     <script type="text/montage-serialization">
-        {
-            "owner": {
-                "properties": {
-                    "element": {"#": "main"}
-                }
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "main"}
+            }
+        },
+        "button": {
+            "prototype": "montage/ui/button.reel",
+            "properties": {
+                "element": {"#": "button"},
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true",
+                "enabled": true,
+                "formenctype": "application/x-www-form-urlencoded",
+                "formmethod": "get",
+                "label": "Button",
+                "type": "button"
+            }
+        },
+        "textField": {
+            "prototype": "montage/ui/text-field.reel",
+            "properties": {
+                "element": {"#": "textField"},
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true",
+                "formenctype": "application/x-www-form-urlencoded",
+                "formmethod": "get",
+                "type": "button",
+                "value": "Text"
             }
         }
+    }
     </script>
 </head>
 <body>
-    <div data-montage-id="main" data-montage-skin="light" class="Main"></div>
+    <div data-montage-id="main" data-montage-skin="light" class="Main">
+        <button data-montage-id="button" data-arg="Test"></button>
+        <input data-montage-id="textField" type="text">
+    </div>
 </body>
 </html>
